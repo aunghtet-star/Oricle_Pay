@@ -32,8 +32,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Phone</label>
-                                <input type="phone" name="phone" value="{{ old('phone') }}" class=" form-control
-                                                            @error('phone') is-invalid @enderror">
+                                <input type="phone" name="phone" value="{{ old('phone') }}"
+                                    class=" form-control @error('phone') is-invalid @enderror">
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -61,7 +61,7 @@
                                     </span>
                                 @enderror
                             </div>
-                            <button type="submit" class="btn btn-theme btn-block my-4">Login</button>
+                            <button type="submit" class="btn btn-theme btn-block my-4">Register</button>
                             <div class="d-flex justify-content-between">
                                 <a href="{{ route('login') }}">Already have an account?</a>
 

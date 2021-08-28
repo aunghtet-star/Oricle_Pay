@@ -31,7 +31,7 @@
                             </div>
                             <button type="submit" class="btn btn-theme btn-block my-4">Login</button>
                             <div class="d-flex justify-content-between">
-                                <a href="{{ route('register') }}">Sign Up</a>
+                                <a href="{{ route('register') }}">Register Now</a>
                                 <a href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>

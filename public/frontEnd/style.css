@@ -1,5 +1,6 @@
 body{
     background: #EDEDF5;
+    font-size: 15px;
 }
 /* =================== Auth Form =================== */
 .auth-form{
@@ -17,4 +18,50 @@ body{
     background: #584283;
     color: #fff;
 }
+/* =================== Header-Bar =================== */
+.header-menu {
+    background: whitesmoke;
+    position: fixed;
+    top : 0;
+    left : 0;
+    right : 0;
+    padding: 12px;
+}
+.header-menu a{
+    color: #333;
+    transition: all 0.3s ease;
+}
+.header-menu a:hover {
+    color : #584283;
+}
+.header-menu i{
+    padding-top: 4px;
+    font-size: 20px;
+}
+.header-menu h3{
+    font-size: 22px;
+    font-weight: 600;
+}
+/* =================== Bottom-Bar =================== */
+.bottom-menu {
+    background: whitesmoke;
+    position: fixed;
+    bottom : 0;
+    left : 0;
+    right : 0;
+}
+.bottom-menu a{
+    color: #333;
+    transition: all 0.3s ease;
+}
+.bottom-menu a:hover {
+    color : #584283;
+}
+
+.bottom-menu a i{
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+
 
