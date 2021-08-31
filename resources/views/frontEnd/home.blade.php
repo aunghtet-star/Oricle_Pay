@@ -1,8 +1,10 @@
 @extends('frontEnd.layouts.app')
+@section('title','OriclePay')
 @section('extra_css')
     <style>
         body {
             background: #EDEDF5;
+            font-family: "Oswald", sans-serif;
         }
 
         .bottom-menu a {

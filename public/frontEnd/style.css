@@ -1,10 +1,12 @@
-body{
-    background: #EDEDF5;
+body {
+    background: #ededf5;
     font-size: 15px;
+    font-family: "Oswald", sans-serif;
 }
+
 /* =================== Auth Form =================== */
-.auth-form{
-    box-shadow: 0 3px 8px rgba(0,0,0 ,0.15);
+.auth-form {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
     border: none;
     border-radius: 10px;
 }
@@ -14,7 +16,7 @@ body{
 }
 /* =================== Btn-theme =================== */
 
-.btn-theme{
+.btn-theme {
     background: #584283;
     color: #fff;
 }
@@ -22,46 +24,85 @@ body{
 .header-menu {
     background: whitesmoke;
     position: fixed;
-    top : 0;
-    left : 0;
-    right : 0;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 12px;
+    z-index: 999;
 }
-.header-menu a{
+.header-menu a {
     color: #333;
     transition: all 0.3s ease;
 }
 .header-menu a:hover {
-    color : #584283;
+    color: #584283;
 }
-.header-menu i{
+.header-menu i {
     padding-top: 4px;
     font-size: 20px;
 }
-.header-menu h3{
+.header-menu h3 {
     font-size: 22px;
     font-weight: 600;
+}
+/* =================== Main-content =================== */
+.container {
+    margin-top: 50px;
+}
+/* =================== Profile =================== */
+.account {
+    text-align: center;
+}
+.account img {
+    border-radius: 100%;
+    width: 100px;
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+.card {
+    border: none;
+    border-radius: 10px !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+.account .logout {
+    cursor: pointer;
+}
+.account .swal2-popup {
+    font-size: 12px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    border: none;
+}
+.swal2-styled.swal2-confirm {
+    border-radius: 10px !important;
+    background: #584283 !important;
+}
+.swal2-styled.swal2-cancel {
+    border-radius: 10px !important;
+}
+/* =================== Update Password =================== */
+.updatePassword img {
+    width: 200px;
 }
 /* =================== Bottom-Bar =================== */
 .bottom-menu {
     background: whitesmoke;
     position: fixed;
-    bottom : 0;
-    left : 0;
-    right : 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
-.bottom-menu a{
+.bottom-menu a {
+    display: block;
     color: #333;
     transition: all 0.3s ease;
 }
 .bottom-menu a:hover {
-    color : #584283;
+    color: #584283;
 }
 
-.bottom-menu a i{
+.bottom-menu a i {
     margin-top: 15px;
     font-size: 20px;
 }
-
-
-

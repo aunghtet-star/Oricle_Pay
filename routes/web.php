@@ -17,8 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::middleware('auth')->group(function () {
-    Route::get('/', 'frontEnd\PageController@home');
+Route::middleware('auth')->namespace('frontEnd')->group(function () {
+    Route::get('/', 'PageController@home')->name('home');
+    Route::get('/profile','PageController@profile')->name('profile');
+    Route::get('/update','PageController@updatePassword')->name('updatePassword');
 });
 
 Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm');

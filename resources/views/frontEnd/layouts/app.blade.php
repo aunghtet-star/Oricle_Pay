@@ -22,6 +22,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{-- Google fonts --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    {{-- SWEET ALERT --}}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
     @yield('extra_css')
 </head>
 
@@ -87,7 +94,7 @@
                         </div>
                         <div class="col-4 text-center">
                             <a href="">
-                                <h3>Oricle Pay</h3>
+                                <h3>@yield('title')</h3>
                             </a>
                         </div>
                         <div class="col-4 text-center">
@@ -109,7 +116,7 @@
                 <div class="col-md-8 ">
                     <div class="row">
                         <div class="col-4 text-center">
-                            <a href="">
+                            <a href="{{route('home')}}">
                                 <i class="fas fa-home"></i>
                                 <p class="mb-0">Home</p>
                             </a>
@@ -121,7 +128,7 @@
                             </a>
                         </div>
                         <div class="col-4 text-center">
-                            <a href="">
+                            <a href="{{route('profile')}}">
                                 <i class="fas fa-user"></i>
                                 <p class="mb-0">Account</p>
                             </a>
@@ -141,6 +148,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+    {{-- jquery --}}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script>
+        $(document).ready(function() {
+            let token = document.head.querySelector('meta[name="csrf-token"]')
+            if (token) {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF_TOKEN': token.content,
+                        'Content-Type':'application/json',
+                        'Accept':'application/json',
+                    }
+                });
+            }   
+        });
+    </script>
+    @yield('scripts')
+
 </body>
 
 </html>
