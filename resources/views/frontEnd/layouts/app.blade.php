@@ -87,17 +87,20 @@
             </div>
         </nav> --}}
         <div class="header-menu">
-            <div class="row justify-content-center">
+            <div class="d-flex justify-content-center">
                 <div class="col-md-8 ">
-                    <div class="row">
-                        <div class="col-4 text-center">
+                    <div class="d-flex">
+                        <div class="col-2 text-center">
+                            @if (!request()->is('/'))
+                                <a href="#"><i class="fas fa-angle-left back"></i></a>    
+                            @endif
                         </div>
-                        <div class="col-4 text-center">
+                        <div class="col-8 text-center">
                             <a href="">
                                 <h3>@yield('title')</h3>
                             </a>
                         </div>
-                        <div class="col-4 text-center">
+                        <div class="col-2 text-center">
                             <a href="">
                                 <i class="fas fa-bell"></i>
                             </a>
@@ -112,25 +115,36 @@
         </main>
 
         <div class="bottom-menu">
-            <div class="row justify-content-center">
+            <a href="" class="scan-tab">
+                <div class="inside">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+            </a>
+            <div class="d-flex justify-content-center">
                 <div class="col-md-8 ">
-                    <div class="row">
-                        <div class="col-4 text-center">
+                    <div class="d-flex">
+                        <div class="col-3 text-center">
                             <a href="{{route('home')}}">
                                 <i class="fas fa-home"></i>
                                 <p class="mb-0">Home</p>
                             </a>
                         </div>
-                        <div class="col-4 text-center">
-                            <a href="">
-                                <i class="fas fa-qrcode"></i>
-                                <p class="mb-0">Scan</p>
+                        <div class="col-3 text-center">
+                            <a href="{{route('wallet')}}">
+                                <i class="fas fa-wallet"></i>
+                                <p class="mb-0">Wallet</p>
                             </a>
                         </div>
-                        <div class="col-4 text-center">
+                        <div class="col-3 text-center">
+                            <a href="#">
+                                <i class="fas fa-exchange-alt"></i>
+                                <p class="mb-0">Transactions</p>
+                            </a>
+                        </div>
+                        <div class="col-3 text-center">
                             <a href="{{route('profile')}}">
                                 <i class="fas fa-user"></i>
-                                <p class="mb-0">Account</p>
+                                <p class="mb-0">Profile</p>
                             </a>
                         </div>
                     </div>
@@ -164,6 +178,30 @@
                 });
             }   
         });
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+        
+        @if (session('update'))
+            Toast.fire({
+            icon: 'success',
+            title: '{{ session('update') }}'
+            })
+        @endif
+
+        $('.back').on('click',function(e){
+            e.preventDefault();
+            window.history.go(-1);
+            return false;
+        })
     </script>
     @yield('scripts')
 
