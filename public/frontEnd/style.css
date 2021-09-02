@@ -3,6 +3,14 @@ body {
     font-size: 15px;
     font-family: "Oswald", sans-serif;
 }
+a{
+     text-decoration: none !important;
+     color: #333 !important;
+}
+a:hover {
+    text-decoration: none !important;
+    color: #584283 !important;
+}
 
 /* =================== Auth Form =================== */
 .auth-form {
@@ -56,6 +64,11 @@ body {
     height: 30px;
     margin-right: 10px;
 }
+.function-bar img{
+    width:28px;
+    height: 28px;
+    margin-right: 10px;
+}
 @media (max-width: 320px) {
     .shortcut-box span {
         font-size: 12px;
@@ -82,7 +95,7 @@ body {
 }
 .profile img {
     border-radius: 100%;
-    width: 100px;
+    width: 80px;
     padding: 5px;
     background: #fff;
     border: 1px solid #ddd;

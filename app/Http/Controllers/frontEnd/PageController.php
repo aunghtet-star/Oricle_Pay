@@ -41,4 +41,16 @@ class PageController extends Controller
         $user = Auth::guard('web')->user();
         return view('frontEnd.wallet',compact('user'));
     }
+    public function transfer(){
+        $user = Auth::guard('web')->user();
+        return view('frontEnd.transfer',compact('user'));
+    }
+    public function transferconfirm(Request $request){
+        $user = Auth::guard('web')->user();
+        $name = $request->name;
+        $phone = $request->phone;
+        $amount = $request->amount;
+        return view('frontEnd.transferconfirm',compact('name','phone','amount','user'));
+    }
+    
 }

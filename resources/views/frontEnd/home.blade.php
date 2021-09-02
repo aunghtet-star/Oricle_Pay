@@ -29,7 +29,7 @@
             </div>
         </div>
 
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between mb-3">
             <div class="col-6 p-0 pr-3">
                 <div class="card shortcut-box">
                     <div class="card-body">
@@ -47,7 +47,26 @@
                 </div>
             </div>
         </div>
-        
+        <div class="col-12 p-0">
+            <div class="card function-bar">
+                <div class="card-body pr-0">
+                        <a href="{{route('transfer')}}" class="d-flex justify-content-between">
+                        <span><img src="{{asset('img/money-transfer.png')}}" alt="">Transfer</span>
+                        <span class="mr-3"><i class="fas fa-angle-right"></i></span>
+                        </a>
+                    <hr>
+                        <a href="#" class="d-flex justify-content-between">
+                        <span><img src="{{asset('img/wallet.png')}}" alt="">Wallet</span>
+                        <span class="mr-3"><i class="fas fa-angle-right"></i></span>
+                        </a>
+                    <hr>
+                        <a href="#" class="d-flex justify-content-between">
+                        <span><img src="{{asset('img/clock.png')}}" alt="">History</span>
+                        <span class="mr-3"><i class="fas fa-angle-right"></i></span>
+                        </a>
+                </div>
+            </div>
+        </div>
         
     </div>
 @endsection
